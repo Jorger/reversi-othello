@@ -1,0 +1,35 @@
+.game-wrapper {
+  --bg-red: #f79976;
+  --bg-blue: #61add0;
+  --bg-initial: #ae7ced;
+}
+
+.game-wrapper {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  transition: all 0.3s linear;
+  width: 100%;
+}
+
+.game-wrapper.initial {
+  background-color: var(--bg-initial);
+}
+
+.game-wrapper.red {
+  background-color: var(--bg-red);
+}
+
+.game-wrapper.blue {
+  background-color: var(--bg-blue);
+}
+
+.game-wrapper-disable {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
