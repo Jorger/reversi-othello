@@ -1,7 +1,9 @@
 import { GameState } from "../../logic";
 import { PlayerId } from "rune-sdk";
 import { useEffect, useState } from "react";
-import { GameWrapper } from "./components";
+import { GridCell, GameWrapper, Grid, Disc } from "./components";
+// import { TBoardColor } from "../../interfaces";
+// Indicator
 
 const Game = () => {
   const [game, setGame] = useState<GameState>();
@@ -25,9 +27,36 @@ const Game = () => {
 
   console.log(yourPlayerId);
 
+  // const testColor: TBoardColor = "BLUE";
+
   return (
     <GameWrapper>
-      <div style={{ color: "white" }}>Inicia el Juego!!</div>
+      <Grid>
+        {/* <GridCell position={{ col: 0, row: 0 }}>
+          <Indicator
+            position={{ col: 0, row: 0 }}
+            onClick={(data) => console.log(data)}
+          />
+        </GridCell>
+        <GridCell position={{ col: 6, row: 7 }}>
+          <Indicator
+            position={{ col: 6, row: 7 }}
+            onClick={(data) => console.log(data)}
+          />
+        </GridCell> */}
+        <GridCell position={{ col: 3, row: 3 }}>
+          <Disc color="RED" key={2} />
+        </GridCell>
+        <GridCell position={{ col: 4, row: 3 }}>
+          <Disc color="BLUE" />
+        </GridCell>
+        <GridCell position={{ col: 3, row: 4 }}>
+          <Disc color="BLUE" />
+        </GridCell>
+        <GridCell position={{ col: 4, row: 4 }}>
+          <Disc color="RED" />
+        </GridCell>
+      </Grid>
     </GameWrapper>
   );
 };

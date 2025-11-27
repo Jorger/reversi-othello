@@ -1,0 +1,11 @@
+.game-grid-cell {
+  align-items: center;
+  display: flex;
+  height: calc(var(--size-cell) - var(--border-size-grid));
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: calc(var(--size-cell) - var(--border-size-grid));
+  z-index: 1;
+}
