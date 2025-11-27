@@ -1,0 +1,33 @@
+.game-disc {
+  border-radius: 50%;
+  height: 85%;
+  width: 85%;
+  box-shadow:
+    rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.3) 0px -3px 0px inset;
+
+  background-repeat: no-repeat;
+  background-size:
+    85% 85%,
+    100% 100%;
+  background-position:
+    50% 1px,
+    25% -1px;
+
+  animation: flip 0.5s both;
+}
+
+.game-disc.red {
+  background-image:
+    radial-gradient(circle, #f6645c 45%, hsla(0, 0%, 100%, 0) 50%),
+    radial-gradient(circle, #fe7368 45%, hsla(0, 0%, 100%, 0) 50%);
+  background-color: #f6645c;
+}
+
+.game-disc.blue {
+  background-image:
+    radial-gradient(circle, #18bfeb 45%, hsla(0, 0%, 100%, 0) 50%),
+    radial-gradient(circle, #2acdf9 45%, hsla(0, 0%, 100%, 0) 50%);
+  background-color: #18bfeb;
+}

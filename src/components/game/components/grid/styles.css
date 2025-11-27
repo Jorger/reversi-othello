@@ -1,0 +1,46 @@
+.game-grid {
+  --border-color: #3d4c4b;
+  --backgroud: #31b845;
+  --circle: radial-gradient(
+    circle,
+    var(--border-color) 40%,
+    hsla(0, 0%, 100%, 0) 50%
+  );
+}
+
+.game-grid {
+  background-image:
+    linear-gradient(
+      var(--border-color) var(--border-size-grid),
+      transparent 1px
+    ),
+    linear-gradient(
+      to right,
+      var(--border-color) var(--border-size-grid),
+      var(--backgroud) 1px
+    );
+  background-size: var(--size-cell) var(--size-cell);
+  border-radius: 5px;
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  height: var(--size-grid);
+  outline: 8px solid var(--border-color);
+  position: relative;
+  width: var(--size-grid);
+}
+
+.game-grid::after {
+  background-image: var(--circle), var(--circle), var(--circle), var(--circle);
+  background-position:
+    24.3% 24.3%,
+    76.3% 24.3%,
+    24.3% 76.3%,
+    76.3% 76.3%;
+  background-repeat: no-repeat;
+  background-size: 4% 4%;
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
