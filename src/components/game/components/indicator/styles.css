@@ -5,4 +5,6 @@
   cursor: pointer;
   height: 100%;
   width: 100%;
+  animation: bounceIn var(--flip-time) both;
+  animation-delay: var(--delay-flip-time);
 }
