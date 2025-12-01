@@ -20,6 +20,12 @@ End the game with more discs of your color on the board than your opponent.
 * The match ends when neither player can make a move or the board is full.
 * The winner is the player with the most discs of their color.
 
+## 📦 Tech Stack
+
+* React
+* Rune.ai (real-time multiplayer engine)
+* TypeScript
+
 ## 🌐 Play Now
 
 You can play Hammer Hit directly in your browser at:
