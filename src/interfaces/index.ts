@@ -1,4 +1,9 @@
-import { EBoardColor, ECellPosition, ETypeCell } from "../utils/constants";
+import {
+  EBoardColor,
+  ECellPosition,
+  ESounds,
+  ETypeCell,
+} from "../utils/constants";
 import { PlayerId, RuneClient, Player as PlayerRune } from "rune-sdk";
 
 declare global {
@@ -16,6 +21,8 @@ export type Ikeycell = `${number}-${number}`;
 export type TDataCell = Record<Ikeycell, IDataCell>;
 export type TOpositeBoardColor = Record<TBoardColor, TBoardColor>;
 export type TNextCell = Record<TCellPosition, IMatrix>;
+export type TESounds = keyof typeof ESounds;
+export type Sounds = Record<TESounds, Howl>;
 
 export type GameActions = {
   onSelectCell: (cellPosition: IMatrix) => void;

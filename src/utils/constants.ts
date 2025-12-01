@@ -98,3 +98,10 @@ export const LABELS = {
   YOUR_TURN: "Your turn",
   OPPONENT_THINKS: "Opponent thinks",
 };
+
+export enum ESounds {
+  COUNTER = "COUNTER",
+  WHISTLE = "WHISTLE",
+  GAME_OVER = "GAME_OVER",
+  FLIP = "FLIP",
+}
