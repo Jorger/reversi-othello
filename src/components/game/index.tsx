@@ -1,10 +1,12 @@
 import { cellPositionInRage } from "../../utils/indexInRange";
 import { getCurrentColor, getRandomCellPosition } from "./helpers";
 import { PlayerId } from "rune-sdk";
+import { playSound } from "../../sounds";
 import { useCallback, useEffect, useState } from "react";
 import { useWait } from "../../hooks";
 import {
   DELAY_FLIP_TIME,
+  ESounds,
   GAME_ACTION_NAME,
   INITIAL_UI_INTERACTIONS,
 } from "../../utils/constants";
@@ -143,6 +145,10 @@ const Game = () => {
               isGameOver: game.isGameOver,
             };
           });
+
+          if (!game.isGameOver) {
+            playSound(ESounds.FLIP);
+          }
         }
       },
     });
@@ -202,7 +208,7 @@ const Game = () => {
   const handleEnabledUI = useCallback(() => {
     setUiInteractions((current) => {
       if (current.isGameOver) {
-        // playSound(ESounds.GAME_OVER);
+        playSound(ESounds.GAME_OVER);
         Rune.showGameOverPopUp();
       }
 
